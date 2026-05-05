@@ -3,7 +3,7 @@ package com.example.sorting;
 public class SortingUtility {
 
     public static <T extends Comparable<T>> void gnomeSort(T[] a) {
-        // TODO implement Gnome Sort here
+
         if (a == null || a.length < 2) {
             return;
         }
@@ -23,7 +23,7 @@ public class SortingUtility {
 
 
     public static <T extends Comparable<T>> void cocktailShakerSort(T[] a) {
-// TODO implement Cocktail Shaker Sort here
+
         if (a == null || a.length < 2) {
             return;
         }
