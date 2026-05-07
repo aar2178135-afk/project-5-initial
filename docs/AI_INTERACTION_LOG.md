@@ -4,3 +4,16 @@
 
 //"Does the code also fulfills the critical requirement? Key Requirements: CRITICAL: You must use the exact variable names from the pseudocode to receive full credit All sorts must handle arrays of Comparable objects (generic implementation) You may use the provided swap() method where appropriate"
 
+//"How about the Psuedocode for gnome sort? "procedure gnomeSort(a[]): pos := 0 while pos < length(a): if (pos == 0 or a[pos] >= a[pos-1]): pos := pos + 1 else: swap a[pos] and a[pos-1] pos := pos - 1"
+
+//"How about the Pseudocode for cocktailshaker sort? procedure cocktailShakerSort(a : list of sortable items) is do swapped := false for each i in 0 to length(a) − 1 do: if a[i] > a[i + 1] then swap(a[i], a[i + 1]) swapped := true end if end for if not swapped then break do-while loop end if swapped := false for each i in length(a) − 1 to 0 do: if a[i] > a[i + 1] then swap(a[i], a[i + 1]) swapped := true end if end for while swapped end procedure"
+
+//"Then how about the pseudocode for Shell sort? # Sort an array a[0...n-1]. gaps = [701, 301, 132, 57, 23, 10, 4, 1] # Ciura gap sequence n = a[] length # Start with the largest gap and work down to a gap of 1 foreach (gap in gaps) { # Do a gapped insertion sort for every elements in gaps for (i = gap; i < n; i += 1) { # save a[i] in temp and make a hole at position i temp = a[i] # shift earlier gap-sorted elements up until the correct location for a[i] is found for (j = i; (j >= gap) && (a[j - gap] > temp); j -= gap) { a[j] = a[j - gap] } # put temp (the original a[i]) in its correct location a[j] = temp } }""
+
+//"Does it all have the correct implementation? Gnome Sort - Part A (30 points) ✓ Correct implementation matching pseudocode (15 pts) ✓ Exact variable names from pseudocode (pos, a) (6 pts) ✓ Proper generic implementation with Comparable (5 pts) ✓ Code clarity and comments (4 pts) Cocktail Shaker Sort - Part B (30 points) ✓ Correct implementation matching pseudocode (15 pts) ✓ Exact variable names from pseudocode (swapped, a, i) (6 pts) ✓ Proper generic implementation with Comparable (5 pts) ✓ Code clarity and comments (4 pts) Shell Sort - (Part C) (40 points) ✓ Correct implementation matching pseudocode (20 pts) ✓ Exact variable names from pseudocode (gaps, n, i, j, temp) (10 pts) ✓ Proper generic implementation with Comparable (6 pts) ✓ Code clarity and comments (4 pts)"
+
+//"Can you give me the correct implementation while it's build on the given pseudo code of gnome sort cocktail shaker sort and shell sort?"
+
+//"Generate comprehensive unit tests and initial test suite for generic Comparable types Test Categories: Empty array: [] Single element: [5] Already sorted: [1, 2, 3, 4, 5] Reverse sorted: [5, 4, 3, 2, 1] Duplicates: [3, 1, 4, 1, 5, 9, 2, 6, 5, 3] All same elements: [5, 5, 5, 5, 5] Two elements (swapped): [2, 1] Two elements (sorted): [1, 2] Random order: [64, 34, 25, 12, 22, 11, 90] String arrays: Test with Comparable objects other than integers (e.g., ["zebra", "apple", "mango", "banana"])"
+
+//"Can you handle both Integer and String test cases, and identify additional edge cases specific to these algorithms"
